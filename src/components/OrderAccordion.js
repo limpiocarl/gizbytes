@@ -1,6 +1,5 @@
 import React from "react";
-import { Fragment, useEffect, useState, useContext } from "react";
-import styled from "styled-components";
+import { Fragment, useEffect, useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
 
 const OrderAccordion = () => {

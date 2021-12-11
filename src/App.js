@@ -4,6 +4,7 @@ import { UserProvider } from "./UserContext";
 import { Container } from "react-bootstrap";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
+import { Fragment } from "react";
 
 //import pages
 import Home from "./pages/Home";
@@ -16,8 +17,11 @@ import Product from "./pages/Product";
 import ProductsPage from "./pages/Products";
 import Profile from "./pages/Profile";
 import AdminProducts from "./pages/AdminProducts";
+import AdminUpdateProduct from "./pages/AdminUpdateProduct";
+import AdminOrders from "./pages/AdminOrders";
 
 //import components
+import BannerTop from "./components/BannerTop";
 import Navbar from "./components/AppNavbar";
 import AdminNavbar from "./components/AdminNavbar";
 import Footer from "./components/Footer";
@@ -67,7 +71,13 @@ function App() {
   return (
     <UserProvider value={{ user, setUser, unsetUser }}>
       <Router>
-        {user.isAdmin ? <AdminNavbar /> : <Navbar />}
+        {user.isAdmin ? (
+          <AdminNavbar />
+        ) : (
+          <Fragment>
+            <BannerTop /> <Navbar />
+          </Fragment>
+        )}
         <Container>
           <Routes>
             <Route exact path="/" element={<Home />} />
@@ -81,6 +91,12 @@ function App() {
             <Route exact path="/user" element={<Profile />} />
             <Route exact path="*" element={<NotFound />} />
             <Route exact path="/adminProducts" element={<AdminProducts />} />
+            <Route
+              exact
+              path="/adminProducts/:productId"
+              element={<AdminUpdateProduct />}
+            />
+            <Route exact path="/adminOrders" element={<AdminOrders />} />
           </Routes>
         </Container>
         <Footer />

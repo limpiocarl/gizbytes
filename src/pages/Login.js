@@ -2,44 +2,44 @@ import React from "react";
 import { useState, useEffect, useContext } from "react";
 import { Fragment } from "react";
 import { Navigate } from "react-router-dom";
-import styled from "styled-components";
+// import styled from "styled-components";
 import Swal from "sweetalert2";
 import { Container, Row, Col } from "react-grid-system";
-import { Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 
 import UserContext from "../UserContext";
 
-const ContainerMain = styled.div`
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+// const ContainerMain = styled.div`
+//   height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// `;
 
-const LoginCard = styled.div`
-  width: 50%;
-  height: auto;
-  background-color: rgba(0, 0, 0, 0.3);
-`;
+// const LoginCard = styled.div`
+//   width: 50%;
+//   height: auto;
+//   background-color: rgba(0, 0, 0, 0.3);
+// `;
 
-const Button1 = styled.button`
-  width: 40%;
-  border: none;
-  padding: 15px 20px;
-  background-color: blue;
-  color: white;
-  cursor: pointer;
-  margin-bottom: 10;
-`;
+// const Button1 = styled.button`
+//   width: 40%;
+//   border: none;
+//   padding: 15px 20px;
+//   background-color: blue;
+//   color: white;
+//   cursor: pointer;
+//   margin-bottom: 10;
+// `;
 
-const Button2 = styled.button`
-  width: 40%;
-  border: none;
-  padding: 15px 20px;
-  background-color: maroon;
-  color: white;
-  margin-bottom: 10;
-`;
+// const Button2 = styled.button`
+//   width: 40%;
+//   border: none;
+//   padding: 15px 20px;
+//   background-color: maroon;
+//   color: white;
+//   margin-bottom: 10;
+// `;
 
 const Login = () => {
   //Function Code
@@ -123,59 +123,63 @@ const Login = () => {
     <Navigate to="/" />
   ) : (
     <Fragment>
-      <ContainerMain>
-        <LoginCard>
-          <Container>
-            <Row>
-              <Col sm={12}>
-                <h1>Login</h1>
-              </Col>
-            </Row>
+      <Container>
+        <Row>
+          <Col sm={12}>
+            <h1 className="text-center m-5" id="header">
+              Sign In
+            </h1>
+          </Col>
+        </Row>
+        <Row className="justify-content-md-center">
+          <Col sm={12} lg={6}>
+            <Form onSubmit={(e) => authenticate(e)}>
+              <Form.Group className="mb-3" controlId="formGroupEmail">
+                <Form.Label id="form-label">Email*</Form.Label>
+                <Form.Control
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formGroupPassword">
+                <Form.Label id="form-label">Password*</Form.Label>
+                <Form.Control
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </Form.Group>
 
-            <Row>
-              <Col sm={12}>
-                <Form onSubmit={(e) => authenticate(e)}>
-                  <Form.Group className="mb-3" controlId="formGroupEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control
-                      type="email"
-                      placeholder="Enter email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-                  <Form.Group className="mb-3" controlId="formGroupPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control
-                      type="password"
-                      placeholder="Password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-
-                  {isActive ? (
-                    <Button1 type="submit">LOGIN</Button1>
-                  ) : (
-                    <Button2 type="submit">LOGIN</Button2>
-                  )}
-                </Form>
-              </Col>
-            </Row>
-            <Row>
-              <Col sm={12}></Col>
-            </Row>
-            <Row style={{ marginBottom: "10px", marginTop: "10px" }}>
-              <Col sm={12}>Forgot your password?</Col>
-            </Row>
-            <Row style={{ marginBottom: "10px" }}>
-              <Col sm={12}>Don't have an account yet?</Col>
-            </Row>
-          </Container>
-        </LoginCard>
-      </ContainerMain>
+              {isActive ? (
+                <Button id="login-button" s className="py-2 my-4" type="submit">
+                  Sign In
+                </Button>
+              ) : (
+                <Button
+                  id="login-button-inactive"
+                  s
+                  className="py-2 my-4"
+                  type="submit"
+                >
+                  Sign In
+                </Button>
+              )}
+            </Form>
+          </Col>
+        </Row>
+        {/* <Row>
+          <Col sm={12}></Col>
+        </Row>
+        <Row style={{ marginBottom: "10px", marginTop: "10px" }}>
+          <Col sm={12}>Forgot your password?</Col>
+        </Row>
+        <Row style={{ marginBottom: "10px" }}>
+          <Col sm={12}>Don't have an account yet?</Col>
+        </Row> */}
+      </Container>
     </Fragment>
   );
 };

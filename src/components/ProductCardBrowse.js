@@ -1,61 +1,58 @@
-import React from "react";
-import { Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Card, Container, Row, Col, Button, Image } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
+// import productbanner from "../bannerphotos/product-banner2.png";
 
 const ProductCardBrowse = ({ productProp }) => {
-  console.log(productProp);
+  const { productName, description, price, _id, productImage1 } = productProp;
 
-  const {
-    productName,
-    description,
-    price,
-    stocks,
-    _id,
-    productImage1,
-    productImage2,
-  } = productProp;
+  const [isHovered, setHover] = useState(false);
+
+  let navigate = useNavigate();
+
+  function handleClick() {
+    navigate(`/products/${_id}`);
+  }
+
   return (
-    <Card>
-      <Card.Body>
-        <img
-          src={`https://glacial-woodland-05160.herokuapp.com/${productImage1}`}
-          alt="xb"
-          id="productImage"
-        />
-        <img
-          src={`https://glacial-woodland-05160.herokuapp.com/${productImage2}`}
-          alt="xb"
-          id="productImage"
-        />
-        <Card.Title>{productName}</Card.Title>
-        <Card.Subtitle>Description:</Card.Subtitle>
-        <Card.Text>{description}</Card.Text>
-        <Card.Subtitle>Price:</Card.Subtitle>
-        <Card.Text>{price}</Card.Text>
-        <Card.Subtitle>Stocks:</Card.Subtitle>
-        <Card.Text>{stocks}</Card.Text>
-        <Link className="btn btn-primary" to={`/products/${_id}`}>
-          View Product
-        </Link>
-      </Card.Body>
-    </Card>
+    <Container>
+      {/* <Image src={productbanner} height={950} /> */}
+      <Row>
+        <Col>
+          <Card id="card-product" className="my-3">
+            <Card.Body className="text-center">
+              <div
+                className="p-4"
+                id="img-product"
+                onMouseOver={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+              >
+                <Card.Img
+                  onClick={handleClick}
+                  variant="top"
+                  id="image-product"
+                  src={`https://glacial-woodland-05160.herokuapp.com/${productImage1}`}
+                  alt="No Image"
+                  fluid
+                />
+                {isHovered && (
+                  <Button id="hover-button" className="py-2 px-4">
+                    Add to cart
+                  </Button>
+                )}
+              </div>
+              <Card.Title id="title-product" className="my-4">
+                {productName}
+              </Card.Title>
+              <Card.Text id="description-product">{description}</Card.Text>
+              <Card.Text id="price-product">₱{price}</Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
 export default ProductCardBrowse;
-
-/*
-<Fragment>
-			<Card style={{ width: '18rem' }}>
-			  <Card.Img variant="top" src="https://www.e-gizmo.net/oc/image/cache/package/KIT/211000028-800x800.jpg" />
-			  <Card.Body>
-			    <Card.Title>ENHANCED TP4056 TYPE C USB PORT LI-ION CHARGER MODULE 1A WITH BMS PROTECTION</Card.Title>
-			    <Card.Text>
-			      Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
-			    </Card.Text>
-			    <Button variant="primary">View Product</Button>
-			  </Card.Body>
-			</Card>
-		</Fragment>
-*/

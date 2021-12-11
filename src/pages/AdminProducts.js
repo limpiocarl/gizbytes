@@ -8,7 +8,7 @@ import {
   FormControl,
   Modal,
 } from "react-bootstrap";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import styled from "styled-components";
 import Swal from "sweetalert2";
 
@@ -216,7 +216,12 @@ const AdminProducts = () => {
                     )}
                   </td>
                   <td>
-                    <Button variant="secondary">Update Product</Button>
+                    <Link
+                      className="btn btn-secondary"
+                      to={`/adminProducts/${item._id}`}
+                    >
+                      Update Product
+                    </Link>
                   </td>
                 </tr>
               ))}
