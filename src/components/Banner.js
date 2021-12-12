@@ -17,7 +17,7 @@ export default function Banner() {
             id="img1"
           />
           <Carousel.Caption className="text-center">
-            <h1 id="caption-carousel">Label for first slide</h1>
+            <h1 id="caption-carousel">Keep up with the latest technology.</h1>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={1500}>
@@ -29,7 +29,7 @@ export default function Banner() {
             id="img2"
           />
           <Carousel.Caption className="text-center">
-            <h1 id="caption-carousel">Label for second slide</h1>
+            <h1 id="caption-carousel">Discover the newest innovations.</h1>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={1500}>
@@ -41,7 +41,7 @@ export default function Banner() {
             id="img3"
           />
           <Carousel.Caption className="text-center">
-            <h1 id="caption-carousel">Label for third slide</h1>
+            <h1 id="caption-carousel">Be at first on something incredible.</h1>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

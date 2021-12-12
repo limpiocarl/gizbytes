@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: "Montserrat Bold";
-  src: url("./fonts/Montserrat-Bold.ttf");
+  src: url("./fonts/avenir-next-bold.ttf");
 }
 
 .cardHighlight {
@@ -171,7 +171,7 @@
 
 #hover-button {
   font-family: "Montserrat Bold";
-  font-size: 0.8rem;
+  font-size: 1rem;
   background-color: black;
   border: none;
   text-align: center;
@@ -185,4 +185,178 @@
   padding: 0;
   margin: 0;
   width: 100%;
+}
+
+#title-productsolo {
+  font-family: "Montserrat Bold";
+  font-size: 4.2rem;
+  color: black;
+}
+
+#items-product {
+  padding-top: 7rem;
+  font-family: "Montserrat Bold";
+}
+
+#productsolo {
+  font-family: "Montserrat Bold";
+  font-size: 1.3rem;
+  margin-top: 30px;
+}
+
+#price-productsolo {
+  font-family: "Montserrat Bold";
+}
+
+#qty-form {
+  display: inline-block;
+  width: 100px;
+  font-family: "Montserrat Bold";
+  font-size: 2rem;
+}
+
+#productsolototal {
+  font-family: "Montserrat Bold";
+  font-size: 1.1rem;
+  margin-top: 30px;
+}
+
+#product-button {
+  background: #fa4616;
+  border: none;
+  border-color: none;
+  border-radius: 35px;
+  padding-left: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 60px;
+  font-family: "Montserrat Bold";
+  font-size: 1.2rem;
+}
+
+#checkbox {
+  width: 30px;
+}
+
+#table-cart {
+  white-space: nowrap;
+}
+
+th {
+  font-family: "Montserrat Medium";
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+td {
+  font-family: "Montserrat Medium";
+  font-size: 1rem;
+  text-align: center;
+  text-align: left;
+}
+
+#checkout-button {
+  font-family: "Montserrat Bold";
+  font-size: 1rem;
+  background-color: black;
+  border: none;
+  border-radius: 20px;
+}
+
+#remove-button {
+  font-family: "Montserrat Bold";
+  font-size: 1rem;
+  background-color: red;
+  border: none;
+  border-radius: 20px;
+}
+
+#profile-header {
+  font-family: "Montserrat Bold";
+  font-size: 4.8rem;
+}
+
+#profile-sub {
+  font-family: "Montserrat Bold";
+  font-size: 1.5rem;
+}
+
+#order-acc {
+  font-family: "Montserrat Medium";
+}
+
+#admin-nav-items {
+  font-family: "Montserrat Bold";
+  font-size: 1.3rem;
+  color: white;
+}
+
+#collasible-nav-dropdown {
+  font-family: "Montserrat Medium";
+  font-size: 1.1rem;
+  color: white;
+}
+
+#search-button {
+  font-family: "Montserrat Bold";
+  font-size: 1.1rem;
+  background-color: black;
+  border: none;
+  border-radius: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#form-sort {
+  font-family: "Montserrat Medium";
+}
+
+#product-table {
+  white-space: nowrap;
+}
+
+#addproduct-button {
+  font-family: "Montserrat Bold";
+  font-size: 1.1rem;
+  background-color: #fa4616;
+  border: none;
+  border-radius: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#addproduct-buttonmain {
+  font-family: "Montserrat Bold";
+  font-size: 1.2rem;
+  background-color: #fa4616;
+  border: none;
+  border-radius: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#save-button {
+  font-family: "Montserrat Bold";
+  font-size: 1.1rem;
+  background-color: black;
+  border: none;
+  border-radius: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#close-button {
+  font-family: "Montserrat Bold";
+  font-size: 1.1rem;
+  background-color: gray;
+  border: none;
+  border-radius: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#product-modal {
+  font-family: "Montserrat Medium";
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { Fragment, useEffect, useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
+import "../App.css";
 
 const OrderAccordion = () => {
   const [orders, setOrders] = useState([]);
@@ -40,10 +41,12 @@ const OrderAccordion = () => {
         </p>
       ) : (
         <Fragment>
-          <Accordion>
+          <Accordion id="order-acc">
             {paidOrders.map((item) => (
               <Accordion.Item>
-                <Accordion.Header>Order ID: {item._id}</Accordion.Header>
+                <Accordion.Header id="order-acc-header">
+                  Order ID: {item._id}
+                </Accordion.Header>
                 <Accordion.Body>
                   <p>Prodcut Name:{item.productName} </p>
                   <p>Product ID: {item.productId}</p>

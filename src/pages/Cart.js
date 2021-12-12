@@ -1,16 +1,8 @@
 import React from "react";
 import { Fragment, useState, useEffect } from "react";
-import { Table, Button, Form } from "react-bootstrap";
-import styled from "styled-components";
+import { Table, Button, Form, Row, Col, Container } from "react-bootstrap";
 import Swal from "sweetalert2";
-
-const Container = styled.div`
-  height: 100vh;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-direction: column;
-`;
+import "../App.css";
 
 const Cart = () => {
   //Orders
@@ -40,6 +32,7 @@ const Cart = () => {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line array-callback-return
     orders.map((item) => {
       if (item.isPaid === false) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -184,98 +177,106 @@ const Cart = () => {
 
   return (
     <Fragment>
-      <Container>
-        {isEmpty === true ? (
-          <Fragment>
-            <h1>Your Cart is Empty</h1>
-            <h1>
-              Click <a href="/products">here</a> to shop now
-            </h1>
-          </Fragment>
-        ) : (
-          <Fragment>
-            <h1>Your Cart</h1>
-            <Form>
-              <Table striped bordered hover>
-                <thead>
-                  <tr>
-                    <th colSpan="2">Product</th>
-                    <th>Unit Price</th>
-                    <th>Quantity</th>
-                    <th>Total</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {orders.map((item) => (
+      {isEmpty === true ? (
+        <Fragment>
+          <h1>Your Cart is Empty</h1>
+          <h1>
+            Click <a href="/products">here</a> to shop now
+          </h1>
+        </Fragment>
+      ) : (
+        <Container>
+          <Row>
+            <Col lg={12} className="text-center my-5">
+              <h1 id="title-productsolo">Shopping Cart</h1>
+            </Col>
+          </Row>
+          <Row>
+            <Col lg={12} className="d-flex justify-content-center">
+              <Form>
+                <Table responsive id="table-cart">
+                  <thead>
                     <tr>
-                      <td>
-                        {item.isPaid ? (
-                          <Form.Check type="checkbox" disabled />
-                        ) : (
-                          <Form.Check
-                            type="checkbox"
-                            name={item.productName}
-                            value={orders.indexOf(item)}
-                            onChange={(e) => handleCheckbox(e)}
-                          />
-                        )}
-                      </td>
-                      <td>{item.productName}</td>
-                      <td>{item.price} PHP</td>
-                      <td>
-                        {item.isPaid ? (
-                          <Form.Control
-                            type="number"
-                            defaultValue={item.quantity}
-                            disabled
-                          />
-                        ) : (
-                          <Form.Control
-                            type="number"
-                            name={orders.indexOf(item)}
-                            defaultValue={item.quantity}
-                            onChange={(e) => updateCart(e)}
-                          />
-                        )}
-                      </td>
-                      <td>{item.price * item.quantity} PHP</td>
-                      <td>{item.isPaid ? `Paid` : `Pending Payment`}</td>
+                      <th colSpan={2}>Product</th>
+                      <th>Unit Price</th>
+                      <th>Quantity</th>
+                      <th>Total</th>
+                      <th>Status</th>
                     </tr>
-                  ))}
-                  <tr>
-                    <td colSpan="2">
-                      <b>Total Price:</b>
-                    </td>
-                    <td colSpan="5">
-                      <b>{totalPrice} PHP</b>
-                    </td>
-                  </tr>
-                </tbody>
-              </Table>
-              <Fragment>
-                <Button
-                  variant="primary"
-                  type="submit"
-                  onClick={(e) => checkOut(e)}
-                  key="1"
-                >
-                  Check Out
-                </Button>
-                <Button
-                  variant="danger"
-                  type="submit"
-                  onClick={(e) => removeItem(e)}
-                  key="2"
-                  style={{ marginLeft: "10px" }}
-                >
-                  Remove Item
-                </Button>
-              </Fragment>
-            </Form>
-          </Fragment>
-        )}
-      </Container>
+                  </thead>
+                  <tbody>
+                    {orders.map((item) => (
+                      <tr>
+                        <td id="checkbox">
+                          {item.isPaid ? (
+                            <Form.Check type="checkbox" disabled />
+                          ) : (
+                            <Form.Check
+                              type="checkbox"
+                              name={item.productName}
+                              value={orders.indexOf(item)}
+                              onChange={(e) => handleCheckbox(e)}
+                            />
+                          )}
+                        </td>
+                        <td>{item.productName}</td>
+                        <td>₱{item.price}</td>
+                        <td>
+                          {item.isPaid ? (
+                            <Form.Control
+                              type="number"
+                              defaultValue={item.quantity}
+                              disabled
+                            />
+                          ) : (
+                            <Form.Control
+                              type="number"
+                              name={orders.indexOf(item)}
+                              defaultValue={item.quantity}
+                              onChange={(e) => updateCart(e)}
+                            />
+                          )}
+                        </td>
+                        <td>{item.price * item.quantity} PHP</td>
+                        <td>{item.isPaid ? `Paid` : `Pending Payment`}</td>
+                      </tr>
+                    ))}
+                    <tr>
+                      <td colSpan="2">
+                        <b>Total Price:</b>
+                      </td>
+                      <td colSpan="5">
+                        <b>₱{totalPrice}</b>
+                      </td>
+                    </tr>
+                  </tbody>
+                </Table>
+                <Fragment>
+                  <Button
+                    id="checkout-button"
+                    className="py-2 px-4"
+                    type="submit"
+                    onClick={(e) => checkOut(e)}
+                    key="1"
+                  >
+                    Check Out
+                  </Button>
+                  <Button
+                    id="remove-button"
+                    className="py-2 px-3"
+                    type="submit"
+                    onClick={(e) => removeItem(e)}
+                    key="2"
+                    style={{ marginLeft: "10px" }}
+                  >
+                    Remove Item
+                  </Button>
+                </Fragment>
+              </Form>
+            </Col>
+          </Row>
+        </Container>
+      )}
     </Fragment>
   );
 };

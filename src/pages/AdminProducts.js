@@ -16,6 +16,8 @@ import UserContext from "../UserContext";
 
 import axios from "axios";
 
+import "../App.css";
+
 const ContainerMain = styled.div`
   height: auto;
   display: flex;
@@ -142,8 +144,15 @@ const AdminProducts = () => {
     <Fragment>
       <ContainerMain>
         <ContainerTop>
-          <FloatingLabel controlId="floatingSelectGrid" label="Sort Products">
-            <Form.Select aria-label="Floating label select example">
+          <FloatingLabel
+            controlId="floatingSelectGrid"
+            label="Sort Products"
+            id="form-sort"
+          >
+            <Form.Select
+              aria-label="Floating label select example"
+              id="form-sort"
+            >
               <option>Sort this product by</option>
               <option value="1">Active Products</option>
               <option value="2">Archived Products</option>
@@ -158,13 +167,21 @@ const AdminProducts = () => {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              id="form-sort"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button id="search-button">Search</Button>
           </Form>
         </ContainerTop>
 
         <Form>
-          <Table striped bordered hover variant="dark">
+          <Table
+            responsive
+            striped
+            bordered
+            hover
+            variant="dark"
+            id="product-table"
+          >
             <thead>
               <tr>
                 <th>Product ID</th>
@@ -228,13 +245,18 @@ const AdminProducts = () => {
             </tbody>
           </Table>
         </Form>
-        <Button variant="primary" onClick={handleShow}>
+        <Button id="addproduct-buttonmain" onClick={handleShow}>
           Add Product
         </Button>
 
-        <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal
+          show={show}
+          onHide={handleClose}
+          animation={false}
+          id="product-modal"
+        >
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>Add Product</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form onSubmit={changeOnClick} encType="multipart/form-data">
@@ -292,16 +314,16 @@ const AdminProducts = () => {
                   onChange={(e) => setProductImage2(e.target.files[0])}
                 />
               </Form.Group>
-              <Button type="submit" className="btn btn-primary my-4">
+              <Button type="submit" className="my-4" id="addproduct-button">
                 Add Product
               </Button>
             </Form>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button id="close-button" onClick={handleClose}>
               Close
             </Button>
-            <Button variant="primary" onClick={handleClose}>
+            <Button id="save-button" onClick={handleClose}>
               Save Changes
             </Button>
           </Modal.Footer>

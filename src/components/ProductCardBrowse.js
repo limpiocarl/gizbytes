@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, Container, Row, Col, Button, Image } from "react-bootstrap";
+import { Card, Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 // import productbanner from "../bannerphotos/product-banner2.png";

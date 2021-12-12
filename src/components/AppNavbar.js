@@ -44,19 +44,17 @@ export default function AppNavbar() {
         >
           {user.id !== null ? (
             <Fragment>
-              <Navbar.Text className="justify-content-center mx-5">
+              {/* <Navbar.Text className="justify-content-center mx-5">
                 Hello {user.firstName} {user.lastName} Welcome to Gizbytes!{" "}
-              </Navbar.Text>
+              </Navbar.Text> */}
               <Nav.Link as={Link} to="/user" exact>
-                <FontAwesomeIcon icon={faUser} size="md"></FontAwesomeIcon>Your
-                Profile
+                <FontAwesomeIcon icon={faUser} size="md"></FontAwesomeIcon>
               </Nav.Link>
               <Nav.Link as={Link} to="/cart" exact>
                 <FontAwesomeIcon
                   icon={faShoppingCart}
                   size="md"
                 ></FontAwesomeIcon>
-                Cart
               </Nav.Link>
               <Nav.Link as={Link} to="/logout" exact>
                 Logout
@@ -69,6 +67,9 @@ export default function AppNavbar() {
               </Nav.Link>
               <Nav.Link as={Link} to="/login" exact>
                 Sign In
+              </Nav.Link>
+              <Nav.Link as={Link} to="/registerAdmin" exact>
+                Join Gizbytes
               </Nav.Link>
             </Fragment>
           )}

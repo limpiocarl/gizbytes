@@ -1,7 +1,6 @@
 import React from "react";
 import { Fragment, useEffect, useState } from "react";
 import { Container, Row, Col } from "react-grid-system";
-import styled from "styled-components";
 import ProductCard from "../components/ProductCardBrowse";
 
 const ProductsPage = () => {

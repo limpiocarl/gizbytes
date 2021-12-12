@@ -9,6 +9,7 @@ import { Fragment } from "react";
 //import pages
 import Home from "./pages/Home";
 import Register from "./pages/Register";
+import RegisterAdmin from "./pages/RegisterAdmin";
 import Login from "./pages/Login";
 import Logout from "./pages/Logout";
 import NotFound from "./pages/NotFound";
@@ -19,6 +20,7 @@ import Profile from "./pages/Profile";
 import AdminProducts from "./pages/AdminProducts";
 import AdminUpdateProduct from "./pages/AdminUpdateProduct";
 import AdminOrders from "./pages/AdminOrders";
+import AdminUsers from "./pages/AdminUsers";
 
 //import components
 import BannerTop from "./components/BannerTop";
@@ -84,6 +86,7 @@ function App() {
             <Route exact path="/home" element={<Home />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/register" element={<Register />} />
+            <Route exact path="/registerAdmin" element={<RegisterAdmin />} />
             <Route exact path="/logout" element={<Logout />} />
             <Route exact path="/cart" element={<Cart />} />
             <Route exact path="/products/:productId" element={<Product />} />
@@ -97,9 +100,10 @@ function App() {
               element={<AdminUpdateProduct />}
             />
             <Route exact path="/adminOrders" element={<AdminOrders />} />
+            <Route exact path="/adminUsers" element={<AdminUsers />} />
           </Routes>
         </Container>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </UserProvider>
   );
