@@ -7,7 +7,7 @@ const ProductCard = (prop) => {
 
   return (
     <Fragment>
-      <div style={{ width: "500px" }}>
+      <div style={{ width: "400px" }} id="product-img-solo">
         <ReactImageMagnify
           {...{
             smallImage: {

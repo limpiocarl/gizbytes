@@ -1,0 +1,61 @@
+#banner-top {
+  background: black;
+  font-family: "Montserrat Bold";
+  font-size: 10px;
+}
+
+#banner-top-text {
+  font-family: "Montserrat Bold";
+  font-size: 15px;
+}
+
+.carousel-indicators {
+  display: none !important;
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+}
+
+#caption-carousel {
+  font-family: "Montserrat Bold";
+  font-size: 65px;
+}
+
+@media (min-width: 320px) {
+  #caption-carousel {
+    font-size: 2.5rem;
+  }
+  #img-carousel {
+    height: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  #caption-carousel {
+    font-size: 3.2rem;
+  }
+  #img-carousel {
+    height: 800px;
+  }
+}
+
+@media (min-width: 992px) {
+  #caption-carousel {
+    font-size: 3rem;
+  }
+  #img-carousel {
+    height: 800px;
+  }
+}
+
+@media (min-width: 1250px) {
+  #caption-carousel {
+    font-size: 4rem;
+  }
+  #img-carousel {
+    height: 800px;
+  }
+}

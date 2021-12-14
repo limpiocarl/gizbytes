@@ -14,18 +14,15 @@
   src: url("./fonts/avenir-next-bold.ttf");
 }
 
+@import url("./components/AppNavbar.css");
+@import url("./components/Banner.css");
+@import url("./components/ProductCardBrowse.css");
+@import url("./pages/Product.css");
+@import url("./pages/Register.css");
+@import url("./pages/Login.css");
+
 .cardHighlight {
   min-height: 100%;
-}
-
-#nav-links {
-  font-family: "Montserrat Bold";
-  font-size: 22px;
-}
-
-#brand-name {
-  font-family: "Montserrat Bold";
-  font-size: 28px;
 }
 
 .container,
@@ -37,201 +34,21 @@
   padding: 0;
 }
 
-#banner-top {
-  background: black;
-  font-family: "Montserrat Bold";
-  font-size: 10px;
-}
-
-#banner-top-text {
-  font-family: "Montserrat Bold";
-  font-size: 15px;
-}
-
-.carousel-indicators {
-  display: none !important;
-}
-
-.carousel-caption {
-  top: 50%;
-  transform: translateY(-50%);
-  bottom: initial;
-}
-
-#caption-carousel {
-  font-family: "Montserrat Bold";
-  font-size: 65px;
-}
-
 .form-control {
   border: none;
   border-bottom: 2.5px solid black;
   border-radius: 0;
 }
 
-#login-button {
-  background: black;
-  border-color: none;
-  border-radius: 30px;
-  padding-left: 60px;
-  padding-right: 60px;
+#banner-top-text {
   font-family: "Montserrat Bold";
-  font-size: 20px;
-}
-
-#login-button-inactive {
-  background: rgb(48, 47, 47);
-  border-radius: 30px;
-  padding-left: 60px;
-  padding-right: 60px;
-  font-family: "Montserrat Bold";
-  font-size: 20px;
-}
-
-#form-label {
-  font-family: "Montserrat Medium";
-  font-size: 17px;
-}
-
-#header {
-  font-family: "Montserrat Bold";
-  font-size: 70px;
-  color: black;
-}
-
-#register-button-active {
-  background: black;
-  border-color: none;
-  border-radius: 35px;
-  padding-left: 50px;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  padding-right: 50px;
-  font-family: "Montserrat Bold";
-  font-size: 25px;
-}
-
-#register-button-inactive {
-  background: rgb(48, 47, 47);
-  border-color: none;
-  border-radius: 35px;
-  padding-left: 50px;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  padding-right: 50px;
-  font-family: "Montserrat Bold";
-  font-size: 25px;
-}
-
-#card-product {
-  border: none;
-}
-
-#img-product {
-  border: 1px solid rgb(184, 181, 181);
-  border-radius: 10px;
-}
-
-#image-product {
-  transition: all 1s ease;
-}
-
-#image-product:hover {
-  transform: scale(0.9);
-}
-
-#title-product {
-  font-family: "Montserrat Bold";
-  font-size: 1.8rem;
-  color: black;
-}
-
-#description-product {
-  font-family: "Montserrat Medium";
-  font-size: 1.3rem;
-  color: black;
-}
-
-#price-product {
-  font-family: "Montserrat Medium";
-  font-size: 1.3rem;
-  color: black;
-}
-
-#product-link {
-  font-family: "Montserrat Bold";
-  border: none;
-  color: black;
-  font-size: 1.2rem;
-}
-
-#over {
-  visibility: hidden;
-}
-
-#hover-button {
-  font-family: "Montserrat Bold";
-  font-size: 1rem;
-  background-color: black;
-  border: none;
-  text-align: center;
-  position: absolute;
-  left: 120px;
-  top: 340px;
-  border-radius: 20px;
+  font-size: 0.8rem;
 }
 
 #shop-banner {
   padding: 0;
   margin: 0;
   width: 100%;
-}
-
-#title-productsolo {
-  font-family: "Montserrat Bold";
-  font-size: 4.2rem;
-  color: black;
-}
-
-#items-product {
-  padding-top: 7rem;
-  font-family: "Montserrat Bold";
-}
-
-#productsolo {
-  font-family: "Montserrat Bold";
-  font-size: 1.3rem;
-  margin-top: 30px;
-}
-
-#price-productsolo {
-  font-family: "Montserrat Bold";
-}
-
-#qty-form {
-  display: inline-block;
-  width: 100px;
-  font-family: "Montserrat Bold";
-  font-size: 2rem;
-}
-
-#productsolototal {
-  font-family: "Montserrat Bold";
-  font-size: 1.1rem;
-  margin-top: 30px;
-}
-
-#product-button {
-  background: #fa4616;
-  border: none;
-  border-color: none;
-  border-radius: 35px;
-  padding-left: 60px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-right: 60px;
-  font-family: "Montserrat Bold";
-  font-size: 1.2rem;
 }
 
 #checkbox {
@@ -359,4 +176,28 @@ td {
 
 #product-modal {
   font-family: "Montserrat Medium";
+}
+
+@media (min-width: 320px) {
+  #banner-top-text {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #banner-top-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #banner-top-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1250px) {
+  #banner-top-text {
+    font-size: 0.8rem;
+  }
 }

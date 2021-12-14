@@ -133,7 +133,7 @@ const Register = () => {
           </Col>
         </Row>
         <Row className="justify-content-md-center">
-          <Col sm={12} lg={6}>
+          <Col sm={12} md={8} lg={6}>
             <Form onSubmit={(e) => registerUser(e)}>
               <Form.Group className="mb-3" controlId="formGroupEmail">
                 <Form.Label id="form-label">First Name*</Form.Label>
@@ -226,7 +226,7 @@ const Register = () => {
           className="justify-content-md-center my-4 text-center"
           style={{ marginBottom: "10px", marginTop: "10px" }}
         >
-          <Col sm={12} lg={6}>
+          <Col sm={12} lg={6} id="form-footer">
             Already have an account? Click <a href="/login">here</a> to Login
           </Col>
         </Row>

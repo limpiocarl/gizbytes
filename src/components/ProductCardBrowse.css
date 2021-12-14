@@ -1,0 +1,93 @@
+#card-product {
+  border: transparent;
+}
+
+#img-product {
+  border: 1px solid rgb(184, 181, 181);
+  border-radius: 10px;
+}
+
+#image-product {
+  transition: all 1s ease;
+}
+
+#image-product:hover {
+  transform: scale(0.9);
+}
+
+#title-product {
+  font-family: "Montserrat Bold";
+  font-size: 1.8rem;
+  color: black;
+}
+
+#description-product {
+  font-family: "Montserrat Medium";
+  font-size: 1.3rem;
+  color: black;
+}
+
+#price-product {
+  font-family: "Montserrat Medium";
+  font-size: 1.3rem;
+  color: black;
+}
+
+#product-link {
+  font-family: "Montserrat Bold";
+  border: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+#over {
+  visibility: hidden;
+}
+
+#hover-button {
+  font-family: "Montserrat Bold";
+  font-size: 1rem;
+  background-color: black;
+  border: none;
+  text-align: center;
+  position: absolute;
+  left: 120px;
+  top: 340px;
+  border-radius: 20px;
+}
+
+@media (min-width: 320px) {
+  #title-product {
+    font-size: 1.5rem;
+  }
+  #description-product {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #title-product {
+    font-size: 1.5rem;
+  }
+  #description-product {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #title-product {
+    font-size: 1.5rem;
+  }
+  #description-product {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1250px) {
+  #title-product {
+    font-size: 1.6rem;
+  }
+  #description-product {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,43 @@
+#login-button {
+  background: black;
+  border: none;
+  border-radius: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  font-family: "Montserrat Bold";
+  font-size: 20px;
+}
+
+#login-button-inactive {
+  background: rgb(48, 47, 47);
+  border-radius: 30px;
+  border: none;
+  padding-left: 60px;
+  padding-right: 60px;
+  font-family: "Montserrat Bold";
+  font-size: 20px;
+}
+
+@media (min-width: 320px) {
+  #login-button {
+    border-radius: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 1rem;
+  }
+  #login-button-inactive {
+    border-radius: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #login-button {
+    font-size: 1.2rem;
+  }
+  #login-button-inactive {
+    font-size: 1.2rem;
+  }
+}

@@ -126,12 +126,12 @@ const Product = () => {
             <h1 id="title-productsolo">{name}</h1>
           </Col>
         </Row>
-        <Row>
+        <Row className="justify-content-center">
           <Col sm={10} lg={6}>
             <div
               style={{
                 display: "flex",
-                justifyContent: "end",
+                justifyContent: "center",
               }}
             >
               <ProductCard {...props} />

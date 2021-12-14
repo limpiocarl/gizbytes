@@ -1,0 +1,120 @@
+#header {
+  font-family: "Montserrat Bold";
+  font-size: 70px;
+  color: black;
+}
+
+#form-label {
+  font-family: "Montserrat Medium";
+  font-size: 17px;
+}
+
+#register-button-active {
+  background: black;
+  border: none;
+  border-radius: 35px;
+  padding-left: 50px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-right: 50px;
+  font-family: "Montserrat Bold";
+  font-size: 25px;
+}
+
+#register-button-inactive {
+  background: rgb(48, 47, 47);
+  border: none;
+  border-radius: 35px;
+  padding-left: 50px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-right: 50px;
+  font-family: "Montserrat Bold";
+  font-size: 25px;
+}
+
+#form-footer {
+  font-family: "Montserrat Medium";
+  font-size: 10px;
+}
+
+@media (min-width: 320px) {
+  #header {
+    font-size: 3rem;
+  }
+  #form-footer {
+    font-size: 0.7rem;
+  }
+  #register-button-active {
+    border-radius: 35px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+    font-size: 1rem;
+  }
+  #register-button-inactive {
+    border-radius: 35px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+    font-size: 1rem;
+  }
+  #form-label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #header {
+    font-size: 4rem;
+  }
+  #form-footer {
+    font-size: 1rem;
+  }
+  #register-button-active {
+    border-radius: 35px;
+    padding-left: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 50px;
+    font-size: 1.2rem;
+  }
+  #register-button-inactive {
+    border-radius: 35px;
+    padding-left: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 50px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #header {
+    font-size: 4.7rem;
+  }
+  #register-button-inactive {
+    border-radius: 35px;
+    padding-left: 50px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-right: 50px;
+    font-size: 25px;
+  }
+  #register-button-active {
+    border-radius: 35px;
+    padding-left: 50px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-right: 50px;
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1250px) {
+  #header {
+    font-size: 70px;
+  }
+}

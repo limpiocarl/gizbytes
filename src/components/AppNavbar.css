@@ -1,0 +1,42 @@
+#nav-links {
+  font-family: "Montserrat Bold";
+  font-size: 22px;
+}
+
+#brand-name {
+  font-family: "Montserrat Bold";
+  font-size: 28px;
+}
+
+@media (min-width: 320px) {
+  #nav-links {
+    font-size: 1rem;
+  }
+  #brand-name {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #nav-links {
+    font-size: 1.1rem;
+  }
+  #brand-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #nav-links {
+    font-size: 1.2rem;
+  }
+  #brand-name {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1250px) {
+  #nav-links {
+    font-size: 1.3rem;
+  }
+}

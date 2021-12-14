@@ -14,7 +14,7 @@ export default function Banner() {
             height={950}
             src={image1}
             alt="One"
-            id="img1"
+            id="img-carousel"
           />
           <Carousel.Caption className="text-center">
             <h1 id="caption-carousel">Keep up with the latest technology.</h1>
@@ -26,7 +26,7 @@ export default function Banner() {
             height={950}
             src={image2}
             alt="Two"
-            id="img2"
+            id="img-carousel"
           />
           <Carousel.Caption className="text-center">
             <h1 id="caption-carousel">Discover the newest innovations.</h1>
@@ -38,7 +38,7 @@ export default function Banner() {
             height={950}
             src={image3}
             alt="Two"
-            id="img3"
+            id="img-carousel"
           />
           <Carousel.Caption className="text-center">
             <h1 id="caption-carousel">Be at first on something incredible.</h1>

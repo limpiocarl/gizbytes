@@ -1,0 +1,90 @@
+#title-productsolo {
+  font-family: "Montserrat Bold";
+  font-size: 4.2rem;
+  color: black;
+}
+
+#items-product {
+  padding-top: 7rem;
+  font-family: "Montserrat Bold";
+}
+
+#productsolo {
+  font-family: "Montserrat Bold";
+  font-size: 1.3rem;
+  margin-top: 30px;
+}
+
+#price-productsolo {
+  font-family: "Montserrat Bold";
+}
+
+#qty-form {
+  display: inline-block;
+  width: 100px;
+  font-family: "Montserrat Bold";
+  font-size: 2rem;
+}
+
+#productsolototal {
+  font-family: "Montserrat Bold";
+  font-size: 1.1rem;
+  margin-top: 30px;
+}
+
+#product-button {
+  background: #fa4616;
+  border: none;
+  border-color: none;
+  border-radius: 35px;
+  padding-left: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 60px;
+  font-family: "Montserrat Bold";
+  font-size: 1.2rem;
+}
+
+@media (min-width: 320px) {
+  #title-productsolo {
+    font-size: 2.2rem;
+  }
+  #items-product {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 380px) {
+  #product-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #title-productsolo {
+    font-size: 3rem;
+  }
+  #items-product {
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #title-productsolo {
+    font-size: 3.7rem;
+  }
+  #items-product {
+    padding-top: 7rem;
+  }
+}
+
+@media (min-width: 1250px) {
+  #title-productsolo {
+    font-size: 4rem;
+  }
+  #items-product {
+    padding-top: 7rem;
+  }
+}

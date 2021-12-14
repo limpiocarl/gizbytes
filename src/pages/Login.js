@@ -154,18 +154,28 @@ const Login = () => {
               </Form.Group>
 
               {isActive ? (
-                <Button id="login-button" s className="py-2 my-4" type="submit">
-                  Sign In
-                </Button>
+                <div className="text-center">
+                  {" "}
+                  <Button
+                    id="login-button"
+                    s
+                    className="py-2 my-4"
+                    type="submit"
+                  >
+                    Sign In
+                  </Button>
+                </div>
               ) : (
-                <Button
-                  id="login-button-inactive"
-                  s
-                  className="py-2 my-4"
-                  type="submit"
-                >
-                  Sign In
-                </Button>
+                <div className="text-center">
+                  <Button
+                    id="login-button-inactive"
+                    s
+                    className="py-2 my-4"
+                    type="submit"
+                  >
+                    Sign In
+                  </Button>
+                </div>
               )}
             </Form>
           </Col>

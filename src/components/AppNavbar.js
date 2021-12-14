@@ -13,7 +13,7 @@ export default function AppNavbar() {
 
   return (
     <Navbar bg="light" variant="light" expand="lg" className="py-3">
-      <Navbar.Brand as={Link} to="/" className="mx-5" id="brand-name">
+      <Navbar.Brand as={Link} to="/" className="mx-2" id="brand-name">
         Gizbytes
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
