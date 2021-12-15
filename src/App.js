@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { UserProvider } from "./UserContext";
 import { Container } from "react-bootstrap";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import { Fragment } from "react";
 
