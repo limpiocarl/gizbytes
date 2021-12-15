@@ -60,7 +60,7 @@ const Register = () => {
     // Prevents page redirection via form submission
     e.preventDefault();
 
-    fetch("https://glacial-woodland-05160.herokuapp.com/users/register", {
+    fetch("https://fathomless-beyond-35679.herokuapp.com/users/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

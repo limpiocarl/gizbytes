@@ -7,7 +7,7 @@ const ProductsPage = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://glacial-woodland-05160.herokuapp.com/products/all")
+    fetch("https://fathomless-beyond-35679.herokuapp.com/products/all")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

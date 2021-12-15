@@ -48,7 +48,7 @@ const AdminProducts = () => {
 
   //Get all products
   useEffect(() => {
-    fetch(`https://glacial-woodland-05160.herokuapp.com/products/all`, {
+    fetch(`https://fathomless-beyond-35679.herokuapp.com/products/all`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -62,7 +62,7 @@ const AdminProducts = () => {
 
   //update product function
   function archiveProduct(x, y) {
-    fetch(`https://glacial-woodland-05160.herokuapp.com/archive`, {
+    fetch(`https://fathomless-beyond-35679.herokuapp.com/archive`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -119,7 +119,7 @@ const AdminProducts = () => {
 
     axios
       .post(
-        "https://glacial-woodland-05160.herokuapp.com/products/add",
+        "https://fathomless-beyond-35679.herokuapp.com/products/add",
         formData,
         {
           headers: {

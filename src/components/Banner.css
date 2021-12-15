@@ -14,7 +14,7 @@
 }
 
 .carousel-caption {
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   bottom: initial;
 }
@@ -47,7 +47,7 @@
     font-size: 3rem;
   }
   #img-carousel {
-    height: 800px;
+    height: 900px;
   }
 }
 
@@ -56,6 +56,6 @@
     font-size: 4rem;
   }
   #img-carousel {
-    height: 800px;
+    height: 900px;
   }
 }

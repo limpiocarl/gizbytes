@@ -9,7 +9,7 @@ const OrderAccordion = () => {
 
   // Get paid items
   useEffect(() => {
-    fetch(`https://glacial-woodland-05160.herokuapp.com/orders/myOrders`, {
+    fetch(`https://fathomless-beyond-35679.herokuapp.com/orders/myOrders`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

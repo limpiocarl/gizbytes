@@ -14,7 +14,7 @@ const Cart = () => {
   let newTotal = 0;
 
   useEffect(() => {
-    fetch(`https://glacial-woodland-05160.herokuapp.com/orders/myOrders`, {
+    fetch(`https://fathomless-beyond-35679.herokuapp.com/orders/myOrders`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -67,7 +67,7 @@ const Cart = () => {
     e.preventDefault();
     console.log(`I'm checking out`);
     fetch(
-      `https://glacial-woodland-05160.herokuapp.com/orders/myOrders/checkOut`,
+      `https://fathomless-beyond-35679.herokuapp.com/orders/myOrders/checkOut`,
       {
         method: "POST",
         headers: {
@@ -105,7 +105,7 @@ const Cart = () => {
     e.preventDefault();
     console.log(`I'm removing you`);
     fetch(
-      `https://glacial-woodland-05160.herokuapp.com/orders/myOrders/remove`,
+      `https://fathomless-beyond-35679.herokuapp.com/orders/myOrders/remove`,
       {
         method: "POST",
         headers: {
@@ -142,7 +142,7 @@ const Cart = () => {
   function updateCart(e) {
     e.preventDefault();
     fetch(
-      `https://glacial-woodland-05160.herokuapp.com/orders/myOrders/update`,
+      `https://fathomless-beyond-35679.herokuapp.com/orders/myOrders/update`,
       {
         method: "POST",
         headers: {

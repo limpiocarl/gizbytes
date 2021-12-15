@@ -38,7 +38,7 @@ export default function AppNavbar() {
           </Fragment>
         </Nav>
         <Nav
-          className="justify-content-end mx-5"
+          className="justify-content-end mx-2"
           style={{ width: "100%" }}
           id="nav-links"
         >

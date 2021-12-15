@@ -51,7 +51,7 @@ const Login = () => {
   function authenticate(e) {
     e.preventDefault();
 
-    fetch("https://glacial-woodland-05160.herokuapp.com/users/login", {
+    fetch("https://fathomless-beyond-35679.herokuapp.com/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -92,7 +92,7 @@ const Login = () => {
 
   const retrieveUserDetails = (token) => {
     console.log(token);
-    fetch("https://glacial-woodland-05160.herokuapp.com/users/details", {
+    fetch("https://fathomless-beyond-35679.herokuapp.com/users/details", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

@@ -49,7 +49,7 @@ const Product = () => {
   useEffect(() => {
     console.log(productId);
 
-    fetch(`https://glacial-woodland-05160.herokuapp.com/products/${productId}`)
+    fetch(`https://fathomless-beyond-35679.herokuapp.com/products/${productId}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -82,7 +82,7 @@ const Product = () => {
     e.preventDefault();
 
     fetch(
-      `https://glacial-woodland-05160.herokuapp.com/orders/${productId}/addtocart`,
+      `https://fathomless-beyond-35679.herokuapp.com/orders/${productId}/addtocart`,
       {
         method: "POST",
         headers: {

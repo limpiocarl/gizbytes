@@ -9,6 +9,7 @@ import {
 } from "react-bootstrap";
 import { Navigate } from "react-router-dom";
 import styled from "styled-components";
+import "../App.css";
 
 import UserContext from "../UserContext";
 
@@ -39,16 +40,13 @@ const AdminProducts = () => {
   const [searchParam, setSearchParam] = useState("");
 
   useEffect(() => {
-    fetch(
-      `https://glacial-woodland-05160.herokuapp.com/products/orders/allOrders`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      }
-    )
+    fetch(`https://fathomless-beyond-35679.herokuapp.com/orders/allOrders`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
@@ -58,23 +56,20 @@ const AdminProducts = () => {
   function agregateOrders(e) {
     console.log(e);
     if (e == 1) {
-      fetch(
-        `https://glacial-woodland-05160.herokuapp.com/products/orders/allOrders`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
-      )
+      fetch(`https://fathomless-beyond-35679.herokuapp.com/orders/allOrders`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
         .then((res) => res.json())
         .then((data) => {
           setOrders(data);
         });
     } else if (e == 2) {
       fetch(
-        `https://glacial-woodland-05160.herokuapp.com/products/orders/allOrders/pending`,
+        `https://fathomless-beyond-35679.herokuapp.com/orders/allOrders/pending`,
         {
           method: "GET",
           headers: {
@@ -89,7 +84,7 @@ const AdminProducts = () => {
         });
     } else if (e == 3) {
       fetch(
-        `https://glacial-woodland-05160.herokuapp.com/products/orders/allOrders/paid`,
+        `https://fathomless-beyond-35679.herokuapp.com/orders/allOrders/paid`,
         {
           method: "GET",
           headers: {
@@ -109,7 +104,7 @@ const AdminProducts = () => {
     e.preventDefault();
 
     fetch(
-      `https://glacial-woodland-05160.herokuapp.com/products/orders/allOrders/specific`,
+      `https://fathomless-beyond-35679.herokuapp.com/orders/allOrders/specific`,
       {
         method: "POST",
         headers: {
@@ -159,7 +154,7 @@ const AdminProducts = () => {
               onChange={(e) => setSearch(e.target.value)}
             />
             <Button
-              variant="outline-success"
+              id="search-button"
               type="submit"
               onClick={(e) => searchOrders(e)}
             >
@@ -169,7 +164,7 @@ const AdminProducts = () => {
         </ContainerTop>
 
         <Form>
-          <Table striped bordered hover variant="dark">
+          <Table responsive striped bordered hover variant="dark">
             <thead>
               <tr>
                 <th>Order ID</th>

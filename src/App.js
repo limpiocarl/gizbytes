@@ -42,7 +42,7 @@ function App() {
 
   useEffect(() => {
     let token = localStorage.getItem("token");
-    fetch("https://glacial-woodland-05160.herokuapp.com/users/details", {
+    fetch("https://fathomless-beyond-35679.herokuapp.com/users/details", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

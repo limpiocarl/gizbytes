@@ -7,16 +7,16 @@ const ProductCard = (prop) => {
 
   return (
     <Fragment>
-      <div style={{ width: "400px" }} id="product-img-solo">
+      <div style={{ width: "500px" }} id="product-img-solo">
         <ReactImageMagnify
           {...{
             smallImage: {
               alt: "Wristwatch by Ted Baker London",
               isFluidWidth: true,
-              src: `https://glacial-woodland-05160.herokuapp.com/${prop.productImage1}`,
+              src: `https://fathomless-beyond-35679.herokuapp.com/${prop.productImage1}`,
             },
             largeImage: {
-              src: `https://glacial-woodland-05160.herokuapp.com/${prop.productImage2}`,
+              src: `https://fathomless-beyond-35679.herokuapp.com/${prop.productImage2}`,
               width: 1600,
               height: 1600,
             },

@@ -14,13 +14,16 @@
   src: url("./fonts/avenir-next-bold.ttf");
 }
 
+/* imported css from different components and pages */
 @import url("./components/AppNavbar.css");
 @import url("./components/Banner.css");
 @import url("./components/ProductCardBrowse.css");
 @import url("./pages/Product.css");
 @import url("./pages/Register.css");
 @import url("./pages/Login.css");
+@import url("./pages/Profile.css");
 
+/* bootstrap class */
 .cardHighlight {
   min-height: 100%;
 }
@@ -40,6 +43,8 @@
   border-radius: 0;
 }
 
+/* banner top css */
+
 #banner-top-text {
   font-family: "Montserrat Bold";
   font-size: 0.8rem;
@@ -50,6 +55,8 @@
   margin: 0;
   width: 100%;
 }
+
+/* tables css */
 
 #checkbox {
   width: 30px;
@@ -86,20 +93,6 @@ td {
   background-color: red;
   border: none;
   border-radius: 20px;
-}
-
-#profile-header {
-  font-family: "Montserrat Bold";
-  font-size: 4.8rem;
-}
-
-#profile-sub {
-  font-family: "Montserrat Bold";
-  font-size: 1.5rem;
-}
-
-#order-acc {
-  font-family: "Montserrat Medium";
 }
 
 #admin-nav-items {

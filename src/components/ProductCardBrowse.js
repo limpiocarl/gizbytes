@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Card, Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
-// import productbanner from "../bannerphotos/product-banner2.png";
+import Swal from "sweetalert2";
 
 const ProductCardBrowse = ({ productProp }) => {
   const { productName, description, price, _id, productImage1 } = productProp;
@@ -13,6 +13,44 @@ const ProductCardBrowse = ({ productProp }) => {
 
   function handleClick() {
     navigate(`/products/${_id}`);
+  }
+
+  // Add to cart function
+  function addToCart(e) {
+    e.preventDefault();
+
+    fetch(
+      `https://fathomless-beyond-35679.herokuapp.com/orders/${_id}/addtocart`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+        body: JSON.stringify({
+          productName: productName,
+          price: price,
+          quantity: 1,
+          totalAmount: price,
+        }),
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data !== true) {
+          Swal.fire({
+            title: "Add to cart failed!",
+            icon: "error",
+            text: "Login first before adding to cart",
+          });
+        } else {
+          Swal.fire({
+            title: "Item added to cart successfully!",
+            icon: "success",
+            text: "Click to view your cart",
+          });
+        }
+      });
   }
 
   return (
@@ -32,12 +70,16 @@ const ProductCardBrowse = ({ productProp }) => {
                   onClick={handleClick}
                   variant="top"
                   id="image-product"
-                  src={`https://glacial-woodland-05160.herokuapp.com/${productImage1}`}
+                  src={`https://fathomless-beyond-35679.herokuapp.com/${productImage1}`}
                   alt="No Image"
                   fluid
                 />
                 {isHovered && (
-                  <Button id="hover-button" className="py-2 px-4">
+                  <Button
+                    id="hover-button"
+                    className="py-2 px-4"
+                    onClick={(e) => addToCart(e)}
+                  >
                     Add to cart
                   </Button>
                 )}

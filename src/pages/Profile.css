@@ -1,0 +1,56 @@
+#profile-header {
+  font-family: "Montserrat Bold";
+  font-size: 4.8rem;
+  color: black;
+}
+
+#profile-sub {
+  font-family: "Montserrat Bold";
+  font-size: 1.5rem;
+}
+
+#order-acc {
+  font-family: "Montserrat Medium";
+}
+
+@media (min-width: 320px) {
+  #profile-header {
+    font-size: 3rem;
+  }
+  #profile-sub {
+    font-size: 1.1rem;
+  }
+  #order-acc {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #profile-header {
+    font-size: 4rem;
+  }
+  #profile-sub {
+    font-size: 1.3rem;
+  }
+  #order-acc {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #profile-header {
+    font-size: 4.5rem;
+  }
+  #profile-sub {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1250px) {
+  #profile-header {
+    font-size: 4.8rem;
+  }
+  #profile-sub {
+    font-size: 1.5rem;
+  }
+}
